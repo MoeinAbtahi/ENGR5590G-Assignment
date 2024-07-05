@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Cart</h1>
+<ul class="cart-list">
+    {% set total_items = 0 %}
+    {% set total_price = 0 %}
+    {% for product in products %}
+        {% set product_id = product.id | string %}
+        {% if product_id in cart %}
+            <li class="cart-item">
+                <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image">
+                <div class="product-details">
+                    <h3>{{ product.name }}</h3>
+                    <p>Quantity: {{ cart[product_id] }}</p>
+                    <p>Total: ${{ product.price * cart[product_id] }}</p>
+                </div>
+            </li>
+            {% set total_items = total_items + cart[product_id] %}
+            {% set total_price = total_price + (product.price * cart[product_id]) %}
+        {% else %}
+            <li>Product ID {{ product.id }} not found in cart</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<p>Total Items: {{ total_items }}</p>
+<p>Total Price: ${{ total_price }}</p>
+<a href="{{ url_for('index') }}">Continue Shopping</a>
+{% endblock %}

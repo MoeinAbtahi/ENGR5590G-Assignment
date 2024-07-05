@@ -1,0 +1,124 @@
+/* Improved base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header.dark-mode {
+    background-color: #000;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer.dark-mode {
+    background-color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.product-item:hover {
+    border-color: #999;
+    background-color: #f1f1f1;
+}
+
+.product-image {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.grid-view .product-item {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+}
+
+.list-view .product-item {
+    display: block;
+    width: 100%;
+}
+
+.btn-add-to-cart,
+.btn-view,
+.btn-remove {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-add-to-cart:hover,
+.btn-view:hover,
+.btn-remove:hover {
+    background-color: #555;
+}
+
+.cart-list .cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.cart-list .product-image {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 1rem;
+}
+
+.cart-list .product-details {
+    flex-grow: 1;
+}

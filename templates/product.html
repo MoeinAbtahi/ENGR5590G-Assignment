@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ product[1] }}</h2>
+<img src="{{ product[5] }}" alt="{{ product[1] }}" class="product-image">
+<p>{{ product[2] }}</p>
+<p>${{ product[3] }}</p>
+<a href="{{ url_for('add_to_cart', product_id=product[0]) }}" class="btn-add-to-cart">Add to Cart</a>
+{% endblock %}
