@@ -801,7 +801,7 @@ Dark Mode:
 3. **Enable Billing**: Ensure billing is enabled for your project.
 4. **Deploy the Application**:
 
-    1. In your project directory, create an `app.yaml` file with the following content:
+1. In your project directory, create an `app.yaml` file with the following content:
 
 This YAML configuration file sets up a Flask application deployment on Google App Engine (Standard Environment) with Python 3.9, configuring environment variables for PostgreSQL database connection, static file serving, Gunicorn as the entrypoint, and automatic scaling based on CPU utilization.
 
@@ -835,13 +835,12 @@ automatic_scaling:
   min_instances: 1
   max_instances: 5
 
-
 ```
-
-    2. Deploy your application:
+2. Deploy your application:
 
         ```bash
         gcloud app deploy
         ```
-
+3. URL on Internet:
+[Online Clothing Shop](https://clothes-shop-428417.ue.r.appspot.com/)
 
