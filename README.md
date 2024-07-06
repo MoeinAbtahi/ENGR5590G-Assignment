@@ -813,3 +813,20 @@ setx DB_PASS ""
 2. Click **Run** or press **F5** to start the server.
 3. Open your web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
+## Website
+
+Home Page:
+![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/92af65d9-0e7f-444a-9003-78867043ca20)
+
+Cart:
+![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/cc5c0cec-e432-4dcc-b5fc-6fd14165dc4f)
+
+Login:
+![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/8946d389-4828-4e0c-ac86-98a6b2ad9b0f)
+
+Register:
+![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/b77b98bf-5d98-4b40-a379-8e1260c86dbd)
+
+
+
+
