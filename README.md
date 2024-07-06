@@ -799,8 +799,8 @@ Make sure to store the key file securely, because it can be used to authenticate
 Windows:
 
 ```bash
-setx GOOGLE_APPLICATION_CREDENTIALS path/to/service/account/key.json
-setx INSTANCE_CONNECTION_NAME INSTANCE_CONNECTION_NAME"
+setx GOOGLE_APPLICATION_CREDENTIALS "path/to/service/account/key.json"
+setx INSTANCE_CONNECTION_NAME "INSTANCE_CONNECTION_NAME"
 setx DB_PORT 5432
 setx DB_NAME ""
 setx DB_USER ""
