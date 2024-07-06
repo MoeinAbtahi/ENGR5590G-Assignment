@@ -765,6 +765,8 @@ document.getElementById('toggle-dark-mode').addEventListener('click', () => {
 ### Set up a service account
 
 Create and configure a Google Cloud service account that has the Cloud SQL Client role with permissions to connect to Cloud SQL. After you create a service account, you might need to wait for 60 seconds or more before you use the service account.
+For more information, see this website.
+[Connect to Cloud SQL for PostgreSQL from your local computer](https://cloud.google.com/sql/docs/postgres/connect-instance-local-computer#python_3)
 
 #### 1. Create a service account
 
@@ -779,10 +781,6 @@ Create and configure a Google Cloud service account that has the Cloud SQL Clien
 8. Click Done to finish creating the service account.
 
 #### 2. Create and download the service account key file
-
-For more information, see this website.
-
-[Connect to Cloud SQL for PostgreSQL from your local computer](https://cloud.google.com/sql/docs/postgres/connect-instance-local-computer#python_3)
 
 1. In the Google Cloud console, go to the Service accounts page.
 [Go to Service accounts](https://console.cloud.google.com/iam-admin/serviceaccounts?_ga=2.64872876.2088878077.1720018590-848580627.1719238841&_gac=1.83633636.1720135752.CjwKCAjwkJm0BhBxEiwAwT1AXDvLwJTqp1fycYjMK4i8xCh5do_1vf_YU2cxqYaNtPkF5rx7hcV5LhoCI_YQAvD_BwE)
