@@ -807,7 +807,6 @@ This YAML configuration file sets up a Flask application deployment on Google Ap
 
 ```yaml
 runtime: python39
-
 env_variables:
   INSTANCE_CONNECTION_NAME: [Cloud SQL instance connection name]
   DB_USER: [Database username]
@@ -834,13 +833,12 @@ automatic_scaling:
   target_cpu_utilization: 0.65
   min_instances: 1
   max_instances: 5
-
 ```
 2. Deploy your application:
 
-        ```bash
-        gcloud app deploy
-        ```
+   ```bash
+   gcloud app deploy
+   ```
 3. URL on Internet:
 [Online Clothing Shop](https://clothes-shop-428417.ue.r.appspot.com/)
 
