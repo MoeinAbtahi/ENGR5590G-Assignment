@@ -842,5 +842,6 @@ automatic_scaling:
 
         ```bash
         gcloud app deploy
+        ```
 
 
