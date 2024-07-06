@@ -809,7 +809,7 @@ setx DB_PASS ""
 
 ### Run the Flask App
 
-1. In Visual Studio, set the startup file to `OnlineShopping.py` if not already set.
+1. In Visual Studio, set the startup file to `app.py` if not already set.
 2. Click **Run** or press **F5** to start the server.
 3. Open your web browser and navigate to [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
