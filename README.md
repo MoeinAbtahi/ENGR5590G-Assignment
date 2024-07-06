@@ -25,9 +25,9 @@ ENGR5590G-Assignment/
 
 ```
 
- ### Create Root Files
+ ## Create Root Files
 
- ## 1. Create app.py
+ ### 1. Create app.py
 
 This code sets up a Flask web application for an e-commerce platform with user registration, login, product display, cart management, and database connectivity using SQLAlchemy.
 
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
  ```
 
-## 2. Create connect_connector.py
+### 2. Create connect_connector.py
 
 This file establishes a connection pool to a Google Cloud SQL instance using the Cloud SQL Python Connector and SQLAlchemy for a Postgres database.
 
@@ -227,7 +227,7 @@ def connect_with_connector() -> sqlalchemy.engine.base.Engine:
     )
     return pool
 ```
-## 3. Create tables.sql
+### 3. Create tables.sql
 
 This SQL script creates a schema for an e-commerce platform with the following tables and relationships:
 
@@ -286,7 +286,7 @@ CREATE TABLE order_items (
     price DECIMAL(10, 2) NOT NULL
 );
 ```
-## 4. Create Sample Data for Tables
+### 4. Create Sample Data for Tables
 
 USERS
 ```sql
@@ -379,7 +379,7 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (5, 9, 1, 299.99),
 (5, 10, 1, 29.99);
 ```
-## 5. Create app.yaml 
+### 5. Create app.yaml 
 
 This YAML configuration file sets up a Flask application deployment on Google App Engine (Standard Environment) with Python 3.9, configuring environment variables for PostgreSQL database connection, static file serving, Gunicorn as the entrypoint, and automatic scaling based on CPU utilization.
 
@@ -416,12 +416,12 @@ automatic_scaling:
 
 ```
 
-### Create Templates Folder
+## Create Templates Folder
 
 1. In the project directory, create a folder named `templates`.
 2. Inside `templates`, create six HTML files: `base.html`, `index.html`, `product.html`, `cart.html`, `login.html`, and `register.html`.
 
-## 1. Create index.html
+### 1. Create index.html
 
 ```html
 <!DOCTYPE html>
