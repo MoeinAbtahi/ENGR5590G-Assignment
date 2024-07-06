@@ -459,7 +459,7 @@ automatic_scaling:
 
 ```
 
-## 2. Create base.html
+### 2. Create base.html
 
 ```html
 <!DOCTYPE html>
@@ -496,7 +496,7 @@ automatic_scaling:
 </html>
 ```
 
-## 3. Create cart.html
+### 3. Create cart.html
 
 ```html
 {% extends "base.html" %}
@@ -531,7 +531,7 @@ automatic_scaling:
 ```
 
 
-## 4. Create product.html
+### 4. Create product.html
 
 ```html
 {% extends "base.html" %}
@@ -545,7 +545,7 @@ automatic_scaling:
 {% endblock %}
 ```
 
-## 5. Create login.html
+### 5. Create login.html
 
 ```html
 {% extends "base.html" %}
@@ -562,7 +562,7 @@ automatic_scaling:
 {% endblock %}
 ```
 
-## 6. Create register.html
+### 6. Create register.html
 
 ```html
 {% extends "base.html" %}
@@ -590,7 +590,7 @@ automatic_scaling:
 3. Inside `static/css`, create a file named `styles.css`.
 4. Inside `static/js`, create a file named `dark-mode.js`.
 
-## Create styles.css
+#### Create styles.css
 
 ```css
 /* Improved base styles */
@@ -718,7 +718,7 @@ ul {
     flex-grow: 1;
 }
 ```
-## Create dark-mode.js
+#### Create dark-mode.js
 
 ```js
 document.getElementById('toggle-dark-mode').addEventListener('click', () => {
@@ -727,9 +727,9 @@ document.getElementById('toggle-dark-mode').addEventListener('click', () => {
     document.querySelector('footer').classList.toggle('dark-mode');
 });
 ```
-### Create database on Google Cloud SQL
+## Create database on Google Cloud SQL
 
-## PostgreSQL
+### PostgreSQL
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/).
 2. Click on the project dropdown and select the project you created for this tutorial.
