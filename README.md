@@ -379,42 +379,6 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (5, 9, 1, 299.99),
 (5, 10, 1, 29.99);
 ```
-### 5. Create app.yaml 
-
-This YAML configuration file sets up a Flask application deployment on Google App Engine (Standard Environment) with Python 3.9, configuring environment variables for PostgreSQL database connection, static file serving, Gunicorn as the entrypoint, and automatic scaling based on CPU utilization.
-
-```yaml
-runtime: python39
-
-env_variables:
-  INSTANCE_CONNECTION_NAME: [Cloud SQL instance connection name]
-  DB_USER: [Database username]
-  DB_PASS: [Database password]
-  DB_NAME: [Database name]
-  DB_HOST: [Database host IP address]
-  DB_PORT: [Database port]
-
-handlers:
-- url: /static
-  static_dir: static
-
-- url: /.*
-  script: auto
-
-entrypoint: gunicorn -b :$PORT app:app
-
-# optional, but recommended to avoid long timeouts
-instance_class: F2
-
-# optional, but recommended for Flask applications with sessions
-# increasing max idle instances to improve startup time
-automatic_scaling:
-  target_cpu_utilization: 0.65
-  min_instances: 1
-  max_instances: 5
-
-
-```
 
 ## Create Templates Folder
 
@@ -830,5 +794,53 @@ Register:
 Dark Mode:
 ![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/8115ae4a-ba9d-49b6-909a-533b898d4e92)
 
+## Deploy to Google Cloud Platform
+
+1. **Install Google Cloud SDK**: Follow the instructions to install the Google Cloud SDK [https://cloud.google.com/sdk/docs/install-sdk].
+2. **Create a New Project**: Go to the Google Cloud Console and create a new project.
+3. **Enable Billing**: Ensure billing is enabled for your project.
+4. **Deploy the Application**:
+
+    1. In your project directory, create an `app.yaml` file with the following content:
+
+This YAML configuration file sets up a Flask application deployment on Google App Engine (Standard Environment) with Python 3.9, configuring environment variables for PostgreSQL database connection, static file serving, Gunicorn as the entrypoint, and automatic scaling based on CPU utilization.
+
+```yaml
+runtime: python39
+
+env_variables:
+  INSTANCE_CONNECTION_NAME: [Cloud SQL instance connection name]
+  DB_USER: [Database username]
+  DB_PASS: [Database password]
+  DB_NAME: [Database name]
+  DB_HOST: [Database host IP address]
+  DB_PORT: [Database port]
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /.*
+  script: auto
+
+entrypoint: gunicorn -b :$PORT app:app
+
+# optional, but recommended to avoid long timeouts
+instance_class: F2
+
+# optional, but recommended for Flask applications with sessions
+# increasing max idle instances to improve startup time
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 5
+
+
+```
+
+    2. Deploy your application:
+
+        ```bash
+        gcloud app deploy
 
 
