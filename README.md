@@ -827,6 +827,8 @@ Login:
 Register:
 ![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/b77b98bf-5d98-4b40-a379-8e1260c86dbd)
 
+Dark Mode:
+![image](https://github.com/MoeinAbtahi/ENGR5590G-Assignment/assets/156379192/8115ae4a-ba9d-49b6-909a-533b898d4e92)
 
 
 
